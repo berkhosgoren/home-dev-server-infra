@@ -32,10 +32,10 @@ remote access. Nothing fancy yet -- just a solid base that future automation and
 Current storage configuration separates system reliability from data storage:
 
 - **SSD (224 GB)**
-  Hosts the operating system and core services. Keeping the OS isolated makes upgrades, reinstalls, and backups safer.
- 
+  - Hosts the operating system and core services. Keeping the OS isolated makes upgrades, reinstalls, and backups safer.
+
 - **HDD (1TB)**
-  Reserved for persistent data:
+  - Reserved for persistent data:
     - databases
     - shared files
     - container volumes
