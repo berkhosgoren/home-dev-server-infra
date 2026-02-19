@@ -31,7 +31,7 @@ remote access. Nothing fancy yet -- just a solid base that future automation and
 
 Current storage configuration separates system reliability from data storage:
 
- - **SSD (224 GB)**
+- **SSD (224 GB)**
   Hosts the operating system and core services. Keeping the OS isolated makes upgrades, reinstalls, and backups safer.
  
 - **HDD (1TB)**
@@ -42,6 +42,7 @@ Current storage configuration separates system reliability from data storage:
     - experiment datasets
 
 This split also makes it easier to replace the OS without touching long-term storage.
+
 
 ---
 
