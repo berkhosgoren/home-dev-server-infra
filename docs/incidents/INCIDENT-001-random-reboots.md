@@ -1,4 +1,4 @@
-\# INCIDENT-001: Random Reboots + SSH Unreachable 
+\# INCIDENT-001: Random Reboots + SSH Unreachable
 
 
 
@@ -6,15 +6,15 @@
 
 
 
-The server experienced intermittent unexpected reboots. When this occurred, SSH connectivity from the main PC would fail (timeout/refused).
+The server experienced intermittent unexpected reboots. When this occurred, SSH connectivity from the main PC would fail (timeout/refused).  
 
 This incident was investigated while preparing the server for headless operation.
 
 
 
-
-
 \## Impact
+
+
 
 \- SSH sessions dropped unexpectedly.
 
@@ -24,9 +24,9 @@ This incident was investigated while preparing the server for headless operation
 
 
 
-
-
 \## Symptoms Observed
+
+
 
 \- Random reboots without obvious external indication (headless).
 
@@ -38,9 +38,9 @@ This incident was investigated while preparing the server for headless operation
 
 
 
-
-
 \## Investigation Steps
+
+
 
 \- Verified SSH service state:
 
@@ -48,49 +48,49 @@ This incident was investigated while preparing the server for headless operation
 
 \- Verified sshd listening on port 22:
 
-  - `sudo ss -tulpn | grep 22`
+&nbsp; - `sudo ss -tulpn | grep 22`
 
 \- Checked IP addressing and routes:
 
-  - `ip a`
+&nbsp; - `ip a`
 
 &nbsp; - `ip route`
 
 \- Reviewed boot/journal logs around reboot events:
 
-  - `journalctl -b -1`
+&nbsp; - `journalctl -b -1`
 
-  - `journalctl -k`
+&nbsp; - `journalctl -k`
 
 \- Ran CPU stress tests to reproduce:
 
-  - `stress-ng ...`
+&nbsp; - `stress-ng ...`
 
 \- Checked for machine check / hardware signals:
 
-  - `journalctl -k --grep="MCE|Hardware Error|WHEA|EDAC|Machine check"`
-
-
+&nbsp; - `journalctl -k --grep="MCE|Hardware Error|WHEA|EDAC|Machine check"`
 
 
 
 \## What Helped / Fixes Applied
 
+
+
 \- Restored SSH availability by ensuring service was enabled/started:
 
-  - `sudo systemctl enable --now ssh`
+&nbsp; - `sudo systemctl enable --now ssh`
 
 \- Firewall issue confirmed: disabling firewall allowed SSH to reconnect.
 
-  - Later plan: keep firewall ON, explicitly allow SSH (port 22) from LAN.
+&nbsp; - Later plan: keep firewall ON, explicitly allow SSH (port 22) from LAN.
 
 \- Network profile change (on client side) impacted reachability; switching to Private improved ping/SSH behavior.
 
 
 
+\## Current Assesment
 
 
-\## Current Assesment 
 
 \- Network/firewall configuration can block SSH and mimic server downtime.
 
@@ -98,33 +98,15 @@ This incident was investigated while preparing the server for headless operation
 
 
 
-
-
 \## Next Actions
+
+
 
 \- Replace PSU (planned).
 
 \- After hardware stability improves:
 
-  - Re-enable firewall with explicit rules for SSH (LAN only).
+&nbsp; - Re-enable firewall with explicit rules for SSH (LAN only).
 
 &nbsp; - Continue with storage configuration for SMB shares.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
