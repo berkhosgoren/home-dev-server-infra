@@ -37,7 +37,7 @@ Multiple firmware revisions were tested to isolate microcode behavior:
 | 7B87v1H1 | 2023-05-18 | Beta   | AGESA 1.2.0.A, TPM patch       | Functional, reduced uptime; with back to back reboots |
 | 7B87v1H2 | 2024-08-09 | Beta   | AGESA 1.2.0.Ca, CVE fix        | Reduced uptime identical to H2|
 | 7B87v1H3 | 2024-09-25 | Beta   | Sinkclose uCode fix             | Reduced uptime; freezes and reboots occured more quickly |
-| 7B87v1H5 | 2025-09-23 | Beta   | AGESA 1.2.0.F, TPM update      | **Provided longer uptime, most consistent system** |
+| 7B87v1H5 | 2025-09-23 | Beta   | AGESA 1.2.0.F, TPM update      | **Provided longer uptime, most consistent system behavior** |
 
 Result:
 
