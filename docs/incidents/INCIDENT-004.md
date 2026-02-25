@@ -94,6 +94,12 @@ Result:
 * Gradually reintroduce performance features (e.g., PBO) only after baseline is confirmed.
 * Resume infrastructure phases from stable hardware baseline starting with Storage Configuration.
 
+## Root Cause Summary
+
+**Primary Trigger:** Aggresive automatic CPU voltage behavior under BIOS auto settings.
+
+**Resolution:** Negative CPU voltage offset applied using BIOS offset mode.
+
 ## Lessons Learned
 
 * BIOS auto-voltage behavior can introduce instability even when hardware is otherwise healthy.
@@ -105,3 +111,9 @@ Result:
 
 * **Stability significantly improved after voltage offset adjustment.**
 * Monitoring ongoing to confirm long-term reliability.
+
+## Timeline of Events
+
+The following timeline summarizes key investigation milestones from INCIDENT-001 through INCIDENT-004, highlighting firmware testing, driver stabilization, and final voltage tuning.
+
+![Incident Timeline](./assets/incident-timeline-home-server.png)
