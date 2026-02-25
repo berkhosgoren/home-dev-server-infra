@@ -13,8 +13,8 @@
 | Documentation | `/docs/setup-guides/` |
 
 ---
-\
-⚠️ **Note:** Hostnames, IP addresses, usernames, and disk names shown in this repository are example values used for documentation purposes. 
+
+> ⚠️ **Note:** Hostnames, IP addresses, usernames, and disk names shown in this repository are example values used for documentation purposes. 
 
 ## 🧭 Project Overview
 
