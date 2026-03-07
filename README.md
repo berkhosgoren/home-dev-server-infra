@@ -1,4 +1,4 @@
-# 🏠 Home Dev Server Infrastructure
+﻿# 🏠 Home Dev Server Infrastructure
 
 > Personal self-hosted development server focused on backend work, automation, and AI experimentation.
 
@@ -16,11 +16,11 @@
 
 > ⚠️ **Note:** Hostnames, IP addresses, usernames, and disk names shown in this repository are example values used for documentation purposes. 
 
-## 🧭 Project Overview
+## 🧭­ Project Overview
 
 My goal is to maintain a stable self-hosted environment for backend development, experimentation, and AI workloads while keeping everything reproducible and easy to rebuild if something breaks.
 
-This server is designed as a multi-purpose home lab — part infrastructure playground, part real production environment for personal projects.
+This server is designed as a multi-purpose home lab â€” part infrastructure playground, part real production environment for personal projects.
 
 
 ## 📚 Setup Documentation
@@ -28,9 +28,9 @@ This server is designed as a multi-purpose home lab — part infrastructure play
 Detailed setup and configuration phases are documented under:
 
 * `/docs/setup-guides/phase-01-base-setup.md`
-* `/docs/setup-guides/phase-02-remote-access-networking.md`
-* `/docs/setup-guides/phase-03a-storage-setup.md`
-* `/docs/setup-guides/phase-03b-samba-network-shares.md`
+* `/docs/setup-guides/phase-02-remote-access.md`
+* `/docs/setup-guides/phase-03a-storage.md`
+* `/docs/setup-guides/phase-03b-samba.md`
 
 ## 💻 Hardware Layout
 
@@ -108,6 +108,7 @@ Some guiding principles:
  - Keep it understandable at 2 AM when something breaks
  - Prefer boring, stable tools over trendy ones
  - Document changes even when they seem obvious at the time
+
 
 
 
